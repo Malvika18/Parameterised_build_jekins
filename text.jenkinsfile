@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    parameters {
+        string defaultValue: 'Mahima', description: 'Choose this default name', name: 'Person'
+    }
+    stages {
+        stage('Build') {
+            steps {
+                
+                echo "Hi this is ${params.Person}, Welcome to jenkins"
+            }
+        }
+        
+        
+    }
+}
